@@ -18,9 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/user/{id?}', function ($user_id = null) {
-    return 'Siz kiritgan raqam ' . $user_id;
-})->name('users');
+// Route::get('/user/{id?}', function ($user_id = null) {
+//     return 'Siz kiritgan raqam ' . $user_id;
+// })->name('users');
 
 Route::prefix('admin')->group(function () {
     Route::get('/user', function () {
@@ -29,7 +29,6 @@ Route::prefix('admin')->group(function () {
 });
 
 Route::get('/user', [UserController::class, 'index']);
-Route::get('/user/viewss', [UserController::class, 'viewss']);
-Route::get('/usre/create', [UserController::class, 'create']);
-Route::get('/user/{data}', [UserController::class, 'show']);
+Route::get('/user/create', [UserController::class, 'create']);
+Route::get('/user /{data}', [UserController::class, 'show']);
 Route::get('/user/{id}/edit', [UserController::class, 'edit']);

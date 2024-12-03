@@ -11,22 +11,24 @@ class UserController extends Controller
         return 'Bu userlarni ro\'yhati';
     }
 
-    public function show($data)
-    {
-        return 'Bu show function';
-    }
 
     public function create()
     {
-        return 'Create page';
-    }
-
-    public function viewss()
-    {
         return view('users.create');
     }
+    
+    public function show($data)
+    {
+        return 'Bu show function' . $data;
+    }
 
-    public function edit($user_id){
-        return $user_id . 'o\'zgartirish';
+    public function edit($user_id)
+    {
+        return $user_id . ' o\'zgartirish';
+    }
+
+    public function test()
+    {
+        return view('');
     }
 };
