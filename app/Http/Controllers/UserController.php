@@ -16,7 +16,7 @@ class UserController extends Controller
     {
         return view('users.create');
     }
-    
+
     public function show($data)
     {
         return 'Bu show function' . $data;
@@ -27,8 +27,14 @@ class UserController extends Controller
         return $user_id . ' o\'zgartirish';
     }
 
-    public function test()
+    public function req($user)
     {
-        return view('');
+        $user += 1000;
+        return view('users.req')->with('name', 'Akmal')->with('id', $user);
+    }
+
+    public function store(Request $request)
+    {
+        dd($request);
     }
 };

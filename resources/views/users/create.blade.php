@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="uz">
 
@@ -9,7 +8,13 @@
 </head>
 
 <body>
-    <h1>go to create page</h1>
+    <h1>New create page</h1>
+    <form action="/user-create" method="POST">
+        @csrf
+        <input type="text" name="text"/>
+        <input type="email" name="email" />
+        <button type="submit">submit</button>
+    </form>
 </body>
 
 </html>

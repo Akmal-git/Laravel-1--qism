@@ -32,3 +32,5 @@ Route::get('/user', [UserController::class, 'index']);
 Route::get('/user/create', [UserController::class, 'create']);
 Route::get('/user /{data}', [UserController::class, 'show']);
 Route::get('/user/{id}/edit', [UserController::class, 'edit']);
+Route::get('/user/req', [UserController::class, 'req']);
+Route::post('/user-create', [UserController::class, 'store']);
